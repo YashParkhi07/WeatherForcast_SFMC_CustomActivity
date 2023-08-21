@@ -3,7 +3,7 @@ const axios = require('axios');
 
 const connection = new Postmonger.Session();
 
-const eventDefinitionKey = 'YOUR_EVENT_DEFINITION_KEY'; // Replace with your actual event definition key
+const eventDefinitionKey = 'e1d21e03-185e-4ff0-9f05-cf5afef778c4'; // Replace with your actual event definition key
 
 let payload = {};
 let meta = {};
@@ -92,7 +92,7 @@ function handleRequestedStop() {
 }
 
 function getWeatherForecast(region) {
-    const apiKey = 'YOUR_WEATHER_API_KEY';
+    const apiKey = '93476b4a31d4b405bb1e255d39c455a0';
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${region}&appid=${apiKey}&units=metric`;
 
     return axios.get(apiUrl)
