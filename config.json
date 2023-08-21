@@ -7,7 +7,7 @@
   "type": "REST",
   "lang": {
     "en-US": {
-      "name": "Custom Activity",
+      "name": "Weather Forcast",
       "description": "Send email with weather forecast"
     }
   },
