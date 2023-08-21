@@ -1,0 +1,61 @@
+{
+    "workflowApiVersion": "1.1",
+    "metaData": {
+        "icon": "images/JourneyIcon.png",
+        "category": "customer",
+        "isConfigured": false
+    },
+    "type": "REST",
+    "lang": {
+        "en-US": {
+            "name": "Custom Activity",
+            "description": "Send email with weather forecast"
+        }
+    },
+    "arguments": {
+        "execute": {
+            "inArguments": [
+                {
+                    "region": "{{Event.Region}}"
+                }
+            ],
+            "outArguments": [],
+            "url": "YOUR_CUSTOM_ACTIVITY_URL",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json"
+        }
+    },
+    "configurationArguments": {
+        "applicationExtensionKey": "YOUR_APP_EXTENSION_KEY",
+        "save": {
+            "url": "YOUR_SAVE_URL",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json"
+        },
+        "publish": {
+            "url": "YOUR_PUBLISH_URL",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json"
+        },
+        "validate": {
+            "url": "YOUR_VALIDATE_URL",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json"
+        },
+        "stop": {
+            "url": "YOUR_STOP_URL",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json"
+        }
+    }
+}

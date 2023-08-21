@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom Activity Configuration</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Custom Activity Configuration</h1>
+    <form id="config-form">
+        <label for="region">Region:</label>
+        <input type="text" id="region" name="region" required><br><br>
+
+        <button type="submit">Save Configuration</button>
+    </form>
+
+    <script>
+        $(document).ready(function () {
+            $('#config-form').submit(function (event) {
+                event.preventDefault();
+
+                const region = $('#region').val();
+
+                // Update the configuration with entered value
+                parent.postMessage(
+                    {
+                        action: 'updateConfig',
+                        arguments: {
+                            region: region
+                        }
+                    },
+                    '*'
+                );
+            });
+        });
+    </script>
+</body>
+</html>
