@@ -1,7 +1,7 @@
  {
   "workflowApiVersion": "1.1",
   "metaData": {
-    "icon": "images/JourneyIcon.png",
+    "icon": "JourneyIcon.png",
     "category": "customer"
   },
   "type": "REST",
