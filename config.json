@@ -23,21 +23,21 @@
           "foundSignupDate": ""
         }
       ],
-      "url": "https://some-endpoint.com/execute"
+      "url": "https://weather-forcast-sfmc-custom-activity-k2uf.vercel.app/journeybuilder/execute"
     }
   },
   "configurationArguments": {
     "save": {
-      "url": "URI/for/your/activity/save"
+      "url": "https://weather-forcast-sfmc-custom-activity-k2uf.vercel.app/journeybuilder/save"
     },
     "publish": {
-      "url": "URI/for/your/activity/publish"
+      "url": "https://weather-forcast-sfmc-custom-activity-k2uf.vercel.app/journeybuilder/publish"
     },
     "validate": {
-      "url": "URI/for/your/activity/validate"
+      "url": "https://weather-forcast-sfmc-custom-activity-k2uf.vercel.app/journeybuilder/validate"
     },
     "stop": {
-      "url": "URI/for/your/activity/stop"
+      "url": "https://weather-forcast-sfmc-custom-activity-k2uf.vercel.app/journeybuilder/stop"
     }
   },
   "userInterfaces": {
