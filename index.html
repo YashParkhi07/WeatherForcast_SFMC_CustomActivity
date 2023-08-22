@@ -1,70 +1,54 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Weather Configuration</title>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+<html lang="en">
+  <head>
     <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type='text/css' />
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/salesforce_style.css">
-    <script type="text/javascript" src="//code.jquery.com/git/jquery-git.min.js"></script>
+    <title>Weather Forcast Journey Activity</title>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/require.js"></script>
     <script type="text/javascript">
-        (function () {
-            var config = {
-                baseUrl: 'js'
-            };
+      (function () {
+        var config = {
+          baseUrl: "",
+        };
 
-            var dependencies = [
-                'customActivity'
-            ];
+        var dependencies = ["customActivity"];
 
-            require(config, dependencies);
-        })();
+        require(config, dependencies);
+      })();
     </script>
-    <script>
-        $(document).ready(function () {
-            $('#config-form').submit(function (event) {
-                event.preventDefault();
 
-                const region = $('#region').val();
+    <!--Styles-->
+    <style type="text/css">
+      body {
+        padding: 20px;
+        margin: 0;
+      }
+      .step {
+        display: none;
+      }
+      #step1 {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="step1" class="step">
+      Select Region:
+      <select id="Region">
+        <option value="">Select an option</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Gujarat">Gujarat</option>
+        <option value="Punjab">Punjab</option>
+        <option value="Kolkata">Kolkata</option>
+        <option value="Pune">Pune</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Chennai">Chennai</option>
+      </select>
 
-                // Update the configuration with entered value
-                parent.postMessage(
-                    {
-                        action: 'updateConfig',
-                        arguments: {
-                            region: region
-                        }
-                    },
-                    '*'
-                );
-            });
-        });
-    </script>
-    </head>
-    <body>
-        <div id="step1" class="step">
-            <div class="slds-grid">
-    
-                <main class="slds-col slds-size--1-of-3 slds-p-horizontal--small">
-                    <div class="slds-form slds-form_stacked">
-                        <div class="slds-form-element">
-                            <label class="slds-form-element__label" for="region">
-                                Region</label>
-                                <div class="slds-form-element__control">
-                                    <input type="text" id="region" class="slds-input" />
-                                </div>
-                            </div>
-                        </div><br>
-                        <div class="slds-form-element">
-                            <button id="btn-save" class="slds-button slds-button_brand" type="submit">Save Configuration</button>
-                        </div>
-                    </main>
-                </div>
-            </div>
-    </body>
+      <button id="save_button">Save</button>
+    </div>
+  </body>
 </html>
