@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
-<body>
-        <form id="config-form">
-        <label for="region">Region:</label>
-        <input type="text" id="region" name="region" required><br><br>
+    <head>
+        <title>Weather Configuration</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-        <button type="submit">Save Configuration</button>
-    </form>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type='text/css' />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/salesforce_style.css">
+    <script type="text/javascript" src="//code.jquery.com/git/jquery-git.min.js"></script>
+    <script type="text/javascript" src="js/require.js"></script>
+    <script type="text/javascript">
+        (function () {
+            var config = {
+                baseUrl: 'js'
+            };
 
+            var dependencies = [
+                'customActivity'
+            ];
+
+            require(config, dependencies);
+        })();
+    </script>
     <script>
         $(document).ready(function () {
             $('#config-form').submit(function (event) {
@@ -31,5 +45,26 @@
             });
         });
     </script>
-</body>
+    </head>
+    <body>
+        <div id="step1" class="step">
+            <div class="slds-grid">
+    
+                <main class="slds-col slds-size--1-of-3 slds-p-horizontal--small">
+                    <div class="slds-form slds-form_stacked">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="region">
+                                Region</label>
+                                <div class="slds-form-element__control">
+                                    <input type="text" id="region" class="slds-input" />
+                                </div>
+                            </div>
+                        </div><br>
+                        <div class="slds-form-element">
+                            <button id="btn-save" class="slds-button slds-button_brand" type="submit">Save Configuration</button>
+                        </div>
+                    </main>
+                </div>
+            </div>
+    </body>
 </html>
